@@ -2,13 +2,15 @@
 #define FM_OPERATOR_H
 
 #include <stdint.h>
+#include <fstream>
 
 class fm_operator
 {
 public:
      // print;
-     // operator>>;
-     // operator<<;
+     friend std::ofstream& operator<<(std::ofstream&, const fm_operator&);
+     friend std::ifstream& operator>>(std::ifstream&, fm_operator&);
+
      // write;
      // read;
 
