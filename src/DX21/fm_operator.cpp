@@ -1,6 +1,6 @@
 #include "fm_operator.h"
 
-std::ifstream& operator>>(std::ifstream& input, fm_operator& op) {
+std::istream& operator>>(std::istream& input, fm_operator& op) {
     input >> op.attack_rate
             >> op.decay1_rate
             >> op.decay2_rate
@@ -19,7 +19,7 @@ std::ifstream& operator>>(std::ifstream& input, fm_operator& op) {
 }
 
 
-std::ofstream& operator<<(std::ofstream& output, const fm_operator& op) {
+std::ostream& operator<<(std::ostream& output, const fm_operator& op) {
     output << op.attack_rate
             << op.decay1_rate
             << op.decay2_rate

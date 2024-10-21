@@ -32,6 +32,10 @@ public:
      */
     ~fm_voice();
 
+    friend std::ostream& operator<<(std::ostream&, const fm_voice&);
+    friend std::istream& operator>>(std::istream&, fm_voice&);
+
+
 private:
     std::array<fm_operator, 4> fm_operators;
     uint8_t algorithm;

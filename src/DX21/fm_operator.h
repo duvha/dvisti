@@ -8,8 +8,8 @@ class fm_operator
 {
 public:
      // print;
-     friend std::ofstream& operator<<(std::ofstream&, const fm_operator&);
-     friend std::ifstream& operator>>(std::ifstream&, fm_operator&);
+     friend std::ostream& operator<<(std::ostream&, const fm_operator&);
+     friend std::istream& operator>>(std::istream&, fm_operator&);
 
      // write;
      // read;
