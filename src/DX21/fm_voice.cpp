@@ -20,9 +20,9 @@ fm_voice::~fm_voice()
 
 std::ostream& operator<<(std::ostream& output, const fm_voice& voice)
 {
-    for(auto op=voice.fm_operators.begin(); op!=voice.fm_operators.end(); op++)
+    for(size_t i = 0; i < voice.op_order.size(); ++i)
     {
-        output << *op;
+        output << voice.fm_operators[voice.op_order[i]];
     }
     output << voice.algorithm
             << voice.feedback_level
@@ -49,9 +49,9 @@ std::ostream& operator<<(std::ostream& output, const fm_voice& voice)
             << voice.bc_amplitude_modulation_range
             << voice.bc_pitch_bias_range
             << voice.bc_eg_bias_range;
-    for(auto ch=voice.voice_name.begin(); ch!=voice.voice_name.end(); ch++)
+    for(size_t i = 0; i < voice.voice_name.size(); ++i)
     {
-        output << *ch;
+        output << voice.voice_name[i];
     }
     output << voice.pitch_eg_rate1
             << voice.pitch_eg_rate2
@@ -65,9 +65,9 @@ std::ostream& operator<<(std::ostream& output, const fm_voice& voice)
 
 std::istream& operator>>(std::istream& input, fm_voice& voice)
 {
-    for(auto op=voice.fm_operators.begin(); op!=voice.fm_operators.end(); op++)
+    for(size_t i = 0; i < voice.op_order.size(); ++i)
     {
-        input >> *op;
+        input >> voice.fm_operators[voice.op_order[i]];
     }
     input >> voice.algorithm
         >> voice.feedback_level
@@ -94,9 +94,9 @@ std::istream& operator>>(std::istream& input, fm_voice& voice)
         >> voice.bc_amplitude_modulation_range
         >> voice.bc_pitch_bias_range
         >> voice.bc_eg_bias_range;
-    for(auto ch=voice.voice_name.begin(); ch!=voice.voice_name.end(); ch++)
+    for(size_t i = 0; i < voice.voice_name.size(); ++i)
     {
-        input >> *ch;
+        input >> voice.voice_name[i];
     }
     input >> voice.pitch_eg_rate1
         >> voice.pitch_eg_rate2

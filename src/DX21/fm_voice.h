@@ -37,6 +37,7 @@ public:
 
 
 private:
+    std::array<int, 4> op_order {4, 2, 3, 1};
     std::array<fm_operator, 4> fm_operators;
     uint8_t algorithm;
     uint8_t feedback_level;
