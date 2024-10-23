@@ -30,7 +30,7 @@ private:
                                               15.70, 16.96, 17.27, 17.30, 18.37, 18.84,
                                               19.03, 19.78, 20.41, 20.76, 21.20, 21.98,
                                               22.49, 23.55, 24.22, 25.95 };
-    std::array<dx21_voice, 32> fm_voices;
+    std::array<dx21_voice, 32> dx21_voices;
     std::stringstream ss;
 
 };

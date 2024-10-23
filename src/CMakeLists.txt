@@ -17,6 +17,12 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        DX21/dx21_operator.h
+        DX21/dx21_operator.cpp
+        DX21/dx21_voice.h
+        DX21/dx21_voice.cpp
+        DX21/dx21.h
+        DX21/dx21.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
