@@ -1,44 +1,44 @@
 // SPDX-FileCopyrightText: 2024 <copyright holder> <email>
 // SPDX-License-Identifier: Apache-2.0
 
-#ifndef FM_VOICE_H
-#define FM_VOICE_H
+#ifndef DX21_VOICE_H
+#define DX21_VOICE_H
 
 #include <array>
 #include <stdint.h>
 
-#include "fm_operator.h"
+#include "dx21_operator.h"
 
 /**
  * @todo write docs
  */
-class fm_voice
+class dx21_voice
 {
 public:
     /**
      * Default constructor
      */
-    fm_voice();
+    dx21_voice();
 
     /**
      * Copy constructor
      *
      * @param other TODO
      */
-    fm_voice(const fm_voice& other);
+    dx21_voice(const dx21_voice& other);
 
     /**
      * Destructor
      */
-    ~fm_voice();
+    ~dx21_voice();
 
-    friend std::ostream& operator<<(std::ostream&, const fm_voice&);
-    friend std::istream& operator>>(std::istream&, fm_voice&);
+    friend std::ostream& operator<<(std::ostream&, const dx21_voice&);
+    friend std::istream& operator>>(std::istream&, dx21_voice&);
 
 
 private:
     std::array<int, 4> op_order {4, 2, 3, 1};
-    std::array<fm_operator, 4> fm_operators;
+    std::array<dx21_operator, 4> dx21_operators;
     uint8_t algorithm;
     uint8_t feedback_level;
     uint8_t lfo_speed;
@@ -73,4 +73,4 @@ private:
     uint8_t pitch_eg_level3;
 };
 
-#endif // FM_VOICE_H
+#endif // DX21_VOICE_H

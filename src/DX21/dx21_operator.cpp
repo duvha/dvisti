@@ -1,6 +1,6 @@
-#include "fm_operator.h"
+#include "dx21_operator.h"
 
-std::istream& operator>>(std::istream& input, fm_operator& op) {
+std::istream& operator>>(std::istream& input, dx21_operator& op) {
     uint8_t ch;
     input >> op.attack_rate
             >> op.decay1_rate
@@ -21,7 +21,7 @@ std::istream& operator>>(std::istream& input, fm_operator& op) {
     return input;
 }
 
-std::ostream& operator<<(std::ostream& output, const fm_operator& op) {
+std::ostream& operator<<(std::ostream& output, const dx21_operator& op) {
     uint8_t ch;
     output << op.attack_rate << op.decay1_rate << op.decay2_rate << op.release_rate << op.decay1_level << op.scaling_level;
     ch = ((op.amplitude_modulation & 0x1) << 6) & ((op.eg_bias_sensitivity & 0x7) << 3) & (op.key_velocity & 0x7);

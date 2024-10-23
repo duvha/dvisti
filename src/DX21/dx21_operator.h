@@ -1,14 +1,14 @@
-#ifndef FM_OPERATOR_H
-#define FM_OPERATOR_H
+#ifndef DX21_OPERATOR_H
+#define DX21_OPERATOR_H
 
 #include <stdint.h>
 #include <fstream>
 
-class fm_operator
+class dx21_operator
 {
 public:
-     friend std::ostream& operator<<(std::ostream&, const fm_operator&);
-     friend std::istream& operator>>(std::istream&, fm_operator&);
+     friend std::ostream& operator<<(std::ostream&, const dx21_operator&);
+     friend std::istream& operator>>(std::istream&, dx21_operator&);
 
 private:
      uint8_t attack_rate;
@@ -26,4 +26,4 @@ private:
      uint8_t detune;
 };
 
-#endif // FM_OPERATOR_H
+#endif // DX21_OPERATOR_H

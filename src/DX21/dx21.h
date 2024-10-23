@@ -7,7 +7,7 @@
 #include <array>
 #include <sstream>
 
-#include "fm_voice.h"
+#include "dx21_voice.h"
 
 /**
  * @todo write docs

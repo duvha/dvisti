@@ -1,30 +1,30 @@
 // SPDX-FileCopyrightText: 2024 <copyright holder> <email>
 // SPDX-License-Identifier: Apache-2.0
 
-#include "fm_voice.h"
+#include "dx21_voice.h"
 
-fm_voice::fm_voice()
+fm_voice::dx21_voice()
 {
 
 }
 
-fm_voice::fm_voice(const fm_voice& other)
+fm_voice::dx21_voice(const fm_voice& other)
 {
 
 }
 
-fm_voice::~fm_voice()
+fm_voice::~dx21_voice()
 {
 
 }
 
-std::ostream& operator<<(std::ostream& output, const fm_voice& voice)
+std::ostream& operator<<(std::ostream& output, const dx21_voice& voice)
 {
     uint8_t ch;
 
     for(size_t i = 0; i < voice.op_order.size(); ++i)
     {
-        output << voice.fm_operators[voice.op_order[i]];
+        output << voice.dx21_operators[voice.op_order[i]];
     }
     output << voice.algorithm
             << voice.feedback_level
@@ -65,13 +65,13 @@ std::ostream& operator<<(std::ostream& output, const fm_voice& voice)
     return output;
 }
 
-std::istream& operator>>(std::istream& input, fm_voice& voice)
+std::istream& operator>>(std::istream& input, dx21_voice& voice)
 {
     uint8_t ch;
 
     for(size_t i = 0; i < voice.op_order.size(); ++i)
     {
-        input >> voice.fm_operators[voice.op_order[i]];
+        input >> voice.dx21_operators[voice.op_order[i]];
     }
     input >> voice.algorithm
         >> voice.feedback_level
