@@ -5,9 +5,9 @@
 
 int dx21::write()
 {
-    for (size_t i = 0; i < fm_voices.size(); ++i)
+    for (size_t i = 0; i < dx21_voices.size(); ++i)
     {
-        ss << fm_voices[i];
+        ss << dx21_voices[i];
     }
 
     return 0;
@@ -15,9 +15,9 @@ int dx21::write()
 
 int dx21::read()
 {
-    for (size_t i = 0; i < fm_voices.size(); ++i)
+    for (size_t i = 0; i < dx21_voices.size(); ++i)
     {
-        ss >> fm_voices[i];
+        ss >> dx21_voices[i];
     }
 
     return 0;

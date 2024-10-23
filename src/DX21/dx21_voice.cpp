@@ -3,17 +3,17 @@
 
 #include "dx21_voice.h"
 
-fm_voice::dx21_voice()
+dx21_voice::dx21_voice()
 {
 
 }
 
-fm_voice::dx21_voice(const fm_voice& other)
+dx21_voice::dx21_voice(const dx21_voice& other)
 {
 
 }
 
-fm_voice::~dx21_voice()
+dx21_voice::~dx21_voice()
 {
 
 }
