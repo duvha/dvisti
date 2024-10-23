@@ -23,9 +23,16 @@ std::istream& operator>>(std::istream& input, dx21_operator& op) {
 
 std::ostream& operator<<(std::ostream& output, const dx21_operator& op) {
     uint8_t ch;
-    output << op.attack_rate << op.decay1_rate << op.decay2_rate << op.release_rate << op.decay1_level << op.scaling_level;
+    output << op.attack_rate
+            << op.decay1_rate
+            << op.decay2_rate
+            << op.release_rate
+            << op.decay1_level
+            << op.scaling_level;
     ch = ((op.amplitude_modulation & 0x1) << 6) & ((op.eg_bias_sensitivity & 0x7) << 3) & (op.key_velocity & 0x7);
-    output << ch << op.output_level << op.oscillator_frequency;
+    output << ch
+            << op.output_level
+            << op.oscillator_frequency;
     ch = ((op.scaling_rate & 0x3) << 3) & (op.detune & 0x7);
     output << ch;
 
