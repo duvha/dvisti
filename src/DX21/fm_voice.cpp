@@ -20,6 +20,8 @@ fm_voice::~fm_voice()
 
 std::ostream& operator<<(std::ostream& output, const fm_voice& voice)
 {
+    uint8_t ch;
+
     for(size_t i = 0; i < voice.op_order.size(); ++i)
     {
         output << voice.fm_operators[voice.op_order[i]];
@@ -65,6 +67,8 @@ std::ostream& operator<<(std::ostream& output, const fm_voice& voice)
 
 std::istream& operator>>(std::istream& input, fm_voice& voice)
 {
+    uint8_t ch;
+
     for(size_t i = 0; i < voice.op_order.size(); ++i)
     {
         input >> voice.fm_operators[voice.op_order[i]];

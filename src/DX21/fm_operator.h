@@ -7,12 +7,8 @@
 class fm_operator
 {
 public:
-     // print;
      friend std::ostream& operator<<(std::ostream&, const fm_operator&);
      friend std::istream& operator>>(std::istream&, fm_operator&);
-
-     // write;
-     // read;
 
 private:
      uint8_t attack_rate;
