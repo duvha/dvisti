@@ -4,6 +4,8 @@
 #ifndef DX21_VOICE_H
 #define DX21_VOICE_H
 
+#include <iostream>
+#include <iomanip>
 #include <array>
 #include <stdint.h>
 
