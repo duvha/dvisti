@@ -26,23 +26,58 @@ std::ostream& operator<<(std::ostream& output, const dx21_voice& voice)
 
     for(size_t i = 0; i < voice.op_order.size(); ++i)
     {
+        if (voice.packed) voice.dx21_operators[voice.op_order[i]].packed = true;
+        else voice.dx21_operators[voice.op_order[i]].packed = false;
         output << voice.dx21_operators[voice.op_order[i]];
     }
-    ch = ((voice.lfo_sync & 0x1) << 6) & ((voice.feedback_level & 0x7) << 3) & (voice.algorithm & 0x7);
-    output << ch;
+    if (voice.packed)
+    {
+        ch = ((voice.lfo_sync & 0x1) << 6) & ((voice.feedback_level & 0x7) << 3) & (voice.algorithm & 0x7);
+        output << ch;
+    }
+    else
+    {
+        output << voice.algorithm
+                <<voice.feedback_level;
+    }
     output << voice.lfo_speed
             << voice.lfo_delay
             << voice.lfo_pitch_modulation_depth
             << voice.lfo_amplitude_modulation_depth;
-    ch = ((voice.pitch_modulation_sensitivity & 0x7) << 4) & ((voice.amplitude_modulation_sensitivity & 0x3) << 2) & (voice.lfo_wave & 0x3);
-    output << ch
-            << voice.transpose
-            << voice.pitch_bend_range;
-    ch = ((voice.chorus_switch & 0x1) << 4) & ((voice.play_mode & 0x1) << 3) & ((voice.sustain_foot_switch & 0x1) << 2) & ((voice.portamento_foot_switch & 0x1) << 1) & (voice.portamento_mode & 0x1);
-    output << ch
-            << voice.portamento_time
-            << voice.foot_volume
-            << voice.mw_pitch_modulation_range
+    if (voice.packed)
+    {
+        ch = ((voice.pitch_modulation_sensitivity & 0x7) << 4) & ((voice.amplitude_modulation_sensitivity & 0x3) << 2) & (voice.lfo_wave & 0x3);
+        output << ch;
+    }
+    else
+    {
+        output << voice.lfo_sync
+                << voice.lfo_wave
+                << voice.pitch_modulation_sensitivity
+                << voice.amplitude_modulation_sensitivity;
+    }
+    output << voice.transpose;
+    if (voice.packed)
+    {
+        output << voice.pitch_bend_range;
+        ch = ((voice.chorus_switch & 0x1) << 4) & ((voice.play_mode & 0x1) << 3) & ((voice.sustain_foot_switch & 0x1) << 2) & ((voice.portamento_foot_switch & 0x1) << 1) & (voice.portamento_mode & 0x1);
+            output << ch;
+    }
+    else
+    {
+        output << voice.play_mode
+                <<voice.pitch_bend_range
+                << voice.portamento_mode;
+    }
+    output << voice.portamento_time
+            << voice.foot_volume;
+    if (!voice.packed)
+    {
+        output << voice.sustain_foot_switch
+                << voice.portamento_foot_switch
+                << voice.chorus_switch;
+    }
+    output << voice.mw_pitch_modulation_range
             << voice.mw_amplitude_modulation_range
             << voice.bc_pitch_modulation_range
             << voice.bc_amplitude_modulation_range
@@ -58,8 +93,8 @@ std::ostream& operator<<(std::ostream& output, const dx21_voice& voice)
             << voice.pitch_eg_level1
             << voice.pitch_eg_level2
             << voice.pitch_eg_level3;
-            ch = output.fill('\0');
-            output << std::setw(55) << '\0';
+    ch = output.fill('\0');
+    output << std::setw(55) << '\0';
 
     return output;
 }
@@ -70,36 +105,71 @@ std::istream& operator>>(std::istream& input, dx21_voice& voice)
 
     for(size_t i = 0; i < voice.op_order.size(); ++i)
     {
+        if (voice.packed) voice.dx21_operators[voice.op_order[i]].packed = true;
+        else voice.dx21_operators[voice.op_order[i]].packed = false;
         input >> voice.dx21_operators[voice.op_order[i]];
     }
-    input >> ch;
-    voice.lfo_sync = (ch >> 6) & 0x1;
-    voice.feedback_level = (ch >> 3) & 0x7;
-    voice.algorithm = ch & 0x7;
+    if (voice.packed)
+    {
+        input >> ch;
+        voice.lfo_sync = (ch >> 6) & 0x1;
+        voice.feedback_level = (ch >> 3) & 0x7;
+        voice.algorithm = ch & 0x7;
+    }
+    else
+    {
+        input >> voice.algorithm
+            >> voice.feedback_level;
+    }
     input >> voice.lfo_speed
         >> voice.lfo_delay
         >> voice.lfo_pitch_modulation_depth
-        >> voice.lfo_amplitude_modulation_depth
-        >> ch;
-    voice.pitch_modulation_sen.sitivity = (ch >> 4) & 0x7;
-    voice.amplitude_modulation_sensitivity = (ch >> 2) & 0x3;
-    voice.lfo_wave = ch & 0x3;
-    input >> voice.transpose
-        >> voice.pitch_bend_range
-        >> ch;
-    voice.chorus_switch = (ch >> 4) & 0x1;
-    voice.play_mode = (ch >> 3) & 0x1;
-    voice.sustain_foot_switch = (ch << 2) & 0x1;
-    voice.portamento_foot_switch = (ch >> 1) & 0x1;
-    voice.portamento_mode = ch & 0x1;
+        >> voice.lfo_amplitude_modulation_depth;
+    if (voice.packed)
+    {
+        input >> ch;
+        voice.pitch_modulation_sensitivity = (ch >> 4) & 0x7;
+        voice.amplitude_modulation_sensitivity = (ch >> 2) & 0x3;
+        voice.lfo_wave = ch & 0x3;
+    }
+    else
+    {
+        input >> voice.lfo_sync
+                >> voice.lfo_wave
+                >> voice.pitch_modulation_sensitivity
+                >> voice.amplitude_modulation_sensitivity;
+    }
+    input >> voice.transpose;
+    if (voice.packed)
+    {
+        input >> voice.pitch_bend_range
+                >> ch;
+        voice.chorus_switch = (ch >> 4 ) & 0x1;
+        voice.play_mode = (ch >> 3) & 0x1;
+        voice.sustain_foot_switch = (ch >> 2) & 0x1;
+        voice.portamento_foot_switch = (ch >> 1) & 0x1;
+        voice.portamento_mode = ch & 0x1;
+    }
+    else
+    {
+        input >> voice.play_mode
+                >> voice.pitch_bend_range
+                >> voice.portamento_mode;
+    }
     input >> voice.portamento_time
-        >> voice.foot_volume
-        >> voice.mw_pitch_modulation_range
-        >> voice.mw_amplitude_modulation_range
-        >> voice.bc_pitch_modulation_range
-        >> voice.bc_amplitude_modulation_range
-        >> voice.bc_pitch_bias_range
-        >> voice.bc_eg_bias_range;
+        >> voice.foot_volume;
+    if (!voice.packed)
+    {
+        input >> voice.sustain_foot_switch
+                >> voice.portamento_foot_switch
+                >> voice.chorus_switch;
+    }
+    input >> voice.mw_pitch_modulation_range
+            >> voice.mw_amplitude_modulation_range
+            >> voice.bc_pitch_modulation_range
+            >> voice.bc_amplitude_modulation_range
+            >> voice.bc_pitch_bias_range
+            >> voice.bc_eg_bias_range;
     for(size_t i = 0; i < voice.voice_name.size(); ++i)
     {
         input >> voice.voice_name[i];

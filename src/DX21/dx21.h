@@ -15,6 +15,10 @@
 class dx21
 {
 public:
+    friend std::ostream& operator<<(std::ostream&, const dx21&);
+    friend std::istream& operator>>(std::istream&, dx21&);
+    mutable bool packed;
+
     int write();
     int read();
 

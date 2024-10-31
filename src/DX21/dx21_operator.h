@@ -9,6 +9,7 @@ class dx21_operator
 public:
      friend std::ostream& operator<<(std::ostream&, const dx21_operator&);
      friend std::istream& operator>>(std::istream&, dx21_operator&);
+     mutable bool packed;
 
 private:
      uint8_t attack_rate;

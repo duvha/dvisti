@@ -17,6 +17,7 @@
 class dx21_voice
 {
 public:
+    mutable bool packed;
     /**
      * Default constructor
      */
