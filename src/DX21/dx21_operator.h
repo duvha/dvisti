@@ -7,6 +7,7 @@
 class dx21_operator
 {
 public:
+     std::vector<uint8_t> writeMessage();
      friend std::ostream& operator<<(std::ostream&, const dx21_operator&);
      friend std::istream& operator>>(std::istream&, dx21_operator&);
      mutable bool packed;

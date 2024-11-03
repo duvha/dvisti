@@ -20,6 +20,7 @@ public:
     mutable bool packed;
 
     bool writeFile(const std::string&);
+    std::vector<uint8_t> writeMessage();
     bool readFile(const std::string&);
 
 private:
@@ -37,7 +38,7 @@ private:
     std::array<dx21_voice, 32> dx21_voices;
     dx21_voice voice_buffer;
     std::stringstream ss;
-
+    std::vector<uint8_t> m_message;
 };
 
 #endif // DX21_H

@@ -7,7 +7,8 @@
 #include <iostream>
 #include <iomanip>
 #include <array>
-#include <stdint.h>
+#include <vector>
+#include <cstdint>
 
 #include "dx21_operator.h"
 
@@ -36,12 +37,15 @@ public:
     ~dx21_voice();
 
     friend std::ostream& operator<<(std::ostream&, const dx21_voice&);
+    std::vector<uint8_t> writeMessage();
     friend std::istream& operator>>(std::istream&, dx21_voice&);
 
 
 private:
+    std::vector<uint8_t> m_message;
     std::array<int, 4> op_order {4, 2, 3, 1};
     std::array<dx21_operator, 4> dx21_operators;
+
     uint8_t algorithm;
     uint8_t feedback_level;
     uint8_t lfo_speed;

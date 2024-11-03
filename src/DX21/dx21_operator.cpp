@@ -1,3 +1,5 @@
+#include <vector>
+
 #include "dx21_operator.h"
 
 std::ostream& operator<<(std::ostream& output, const dx21_operator& op)
@@ -34,6 +36,44 @@ std::ostream& operator<<(std::ostream& output, const dx21_operator& op)
         }
 
         return output;
+}
+
+std::vector<uint8_t> dx21_operator::writeMessage()
+{
+        std::vector<uint8_t> message;
+        uint8_t ch;
+
+        message.push_back(attack_rate);
+        message.push_back(decay1_rate);
+        message.push_back(decay2_rate);
+        message.push_back(release_rate);
+        message.push_back(decay1_level);
+        message.push_back(scaling_level);
+        if (packed)
+        {
+                ch = ((amplitude_modulation & 0x1) << 6) & ((eg_bias_sensitivity & 0x7) << 3) & (key_velocity & 0x7);
+                message.push_back(ch);
+        }
+        else
+        {
+                message.push_back(scaling_rate);
+                message.push_back(eg_bias_sensitivity);
+                message.push_back(amplitude_modulation);
+                message.push_back(key_velocity);
+        }
+        message.push_back(output_level);
+        message.push_back(oscillator_frequency);
+        if (packed)
+        {
+                ch = ((scaling_rate & 0x3) << 3) & (detune & 0x7);
+                message.push_back(ch);
+        }
+        else
+        {
+                message.push_back(detune);
+        }
+
+        return message;
 }
 
 std::istream& operator>>(std::istream& input, dx21_operator& op)

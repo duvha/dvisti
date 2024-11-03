@@ -98,6 +98,87 @@ std::ostream& operator<<(std::ostream& output, const dx21_voice& voice)
     return output;
 }
 
+std::vector<uint8_t> dx21_voice::writeMessage()
+{
+    uint8_t ch;
+    m_message.clear();
+
+    std::vector<uint8_t> op_message;
+    for(size_t i = 0; i < op_order.size(); ++i)
+    {
+        dx21_operators[op_order[i]].packed = packed;
+        op_message = dx21_operators[op_order[i]].writeMessage();
+        m_message.insert(m_message.end(), op_message.begin(), op_message.end());
+    }
+    if (packed)
+    {
+        ch = ((lfo_sync & 0x1) << 6) & ((feedback_level & 0x7) << 3) & (algorithm & 0x7);
+        m_message.push_back(ch);
+    }
+    else
+    {
+        m_message.push_back(algorithm);
+        m_message.push_back(feedback_level);
+    }
+    m_message.push_back(lfo_speed);
+    m_message.push_back(lfo_delay);
+    m_message.push_back(lfo_pitch_modulation_depth);
+    m_message.push_back(lfo_amplitude_modulation_depth);
+    if (packed)
+    {
+        ch = ((pitch_modulation_sensitivity & 0x7) << 4) & ((amplitude_modulation_sensitivity & 0x3) << 2) & (lfo_wave & 0x3);
+        m_message.push_back(ch);
+    }
+    else
+    {
+        m_message.push_back(lfo_sync);
+        m_message.push_back(lfo_wave);
+        m_message.push_back(pitch_modulation_sensitivity);
+        m_message.push_back(amplitude_modulation_sensitivity);
+    }
+    m_message.push_back(transpose);
+    if (packed)
+    {
+        m_message.push_back(pitch_bend_range);
+        ch = ((chorus_switch & 0x1) << 4) & ((play_mode & 0x1) << 3) & ((sustain_foot_switch & 0x1) << 2) & ((portamento_foot_switch & 0x1) << 1) & (portamento_mode & 0x1);
+        m_message.push_back(ch);
+    }
+    else
+    {
+        m_message.push_back(play_mode);
+        m_message.push_back(pitch_bend_range);
+        m_message.push_back(portamento_mode);
+    }
+    m_message.push_back(portamento_time);
+    m_message.push_back(foot_volume);
+    if (!packed)
+    {
+        m_message.push_back(sustain_foot_switch);
+        m_message.push_back(portamento_foot_switch);
+        m_message.push_back(chorus_switch);
+    }
+    m_message.push_back(mw_pitch_modulation_range);
+    m_message.push_back(mw_amplitude_modulation_range);
+    m_message.push_back(bc_pitch_modulation_range);
+    m_message.push_back(bc_amplitude_modulation_range);
+    m_message.push_back(bc_pitch_bias_range);
+    m_message.push_back(bc_eg_bias_range);
+    for(size_t i = 0; i < voice_name.size(); ++i)
+    {
+        m_message.push_back(voice_name[i]);
+    }
+    m_message.push_back(pitch_eg_rate1);
+    m_message.push_back(pitch_eg_rate2);
+    m_message.push_back(pitch_eg_rate3);
+    m_message.push_back(pitch_eg_level1);
+    m_message.push_back(pitch_eg_level2);
+    m_message.push_back(pitch_eg_level3);
+    //ch = output.fill('\0');
+    //output << std::setw(55) << '\0';
+
+    return m_message;
+}
+
 std::istream& operator>>(std::istream& input, dx21_voice& voice)
 {
     uint8_t ch;

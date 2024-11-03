@@ -16,44 +16,57 @@ bool dx21::writeFile(const std::string& filename)
     std::ofstream file(filename, std::ifstream::binary | std::ifstream::out);
     if (!file.is_open()) return false;
 
-    file << 0xf0;
-    file << 0x43;
-    file << 0x00;
+    writeMessage();
+    file.write(reinterpret_cast<char*>(m_message.data()), m_message.size());
+    file.close();
+    return true;
+}
+
+std::vector<uint8_t> dx21::writeMessage()
+{
+    uint8_t checksum;
+
+    m_message.clear();
+
+    m_message.push_back(0xf0);
+    m_message.push_back(0x43);
+    m_message.push_back(0x00);
     if (packed)
     {
-        file << 0x04;
-        file << 0x20;
-        file << 0x00;
+        m_message.push_back(0x04);
+        m_message.push_back(0x20);
+        m_message.push_back(0x00);
     }
     else
     {
-        file << 0x03;
-        file << 0x00;
-        file << 0x5d;
+        m_message.push_back(0x03);
+        m_message.push_back(0x00);
+        m_message.push_back(0x5d);
     }
 
-    std::ostringstream voice_data;
+    std::vector<uint8_t> voice_data;
     if (packed)
     {
         for (size_t i = 0; i < dx21_voices.size(); ++i)
         {
             dx21_voices[i].packed = packed;
-            voice_data << dx21_voices[i];
+            voice_data = dx21_voices[i].writeMessage();
+            m_message.insert(m_message.end(), voice_data.begin(), voice_data.end());
         }
     }
     else
     {
         voice_buffer.packed = packed;
-        voice_data << voice_buffer;
+        voice_data = voice_buffer.writeMessage();
+        m_message.insert(m_message.end(), voice_data.begin(), voice_data.end());
     }
-    file << voice_data.str();
-    checksum = std::accumulate(voice_data.str().begin(), voice_data.str().end(), 0);
-    checksum &= 0x7f;
-    file << checksum;
-    file << 0xf7;
 
-    file.close();
-    return true;
+    checksum = std::accumulate(m_message.begin(), m_message.end(), 0);
+    checksum &= 0x7f;
+    m_message.push_back(checksum);
+    m_message.push_back(0xf7);
+
+    return m_message;
 }
 
 bool dx21::readFile(const std::string& filename)
