@@ -20,7 +20,7 @@ std::ostream& operator<<(std::ostream& output, const dx21_operator& op)
                         << op.eg_bias_sensitivity
                         << op.amplitude_modulation
                         << op.key_velocity;
-                }
+        }
         output << op.output_level
                 << op.oscillator_frequency;
         if (op.packed)

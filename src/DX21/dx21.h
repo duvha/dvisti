@@ -19,8 +19,8 @@ public:
     friend std::istream& operator>>(std::istream&, dx21&);
     mutable bool packed;
 
-    int write();
-    int read();
+    bool writeFile(const std::string&);
+    bool readFile(const std::string&);
 
 private:
     std::array<float, 64> frequency_ratios = { 0.50,  0.71,  0.78,  0.87,  1.00,  1.41,
@@ -35,6 +35,7 @@ private:
                                               19.03, 19.78, 20.41, 20.76, 21.20, 21.98,
                                               22.49, 23.55, 24.22, 25.95 };
     std::array<dx21_voice, 32> dx21_voices;
+    dx21_voice voice_buffer;
     std::stringstream ss;
 
 };

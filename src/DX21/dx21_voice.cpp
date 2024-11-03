@@ -26,8 +26,7 @@ std::ostream& operator<<(std::ostream& output, const dx21_voice& voice)
 
     for(size_t i = 0; i < voice.op_order.size(); ++i)
     {
-        if (voice.packed) voice.dx21_operators[voice.op_order[i]].packed = true;
-        else voice.dx21_operators[voice.op_order[i]].packed = false;
+        voice.dx21_operators[voice.op_order[i]].packed = voice.packed;
         output << voice.dx21_operators[voice.op_order[i]];
     }
     if (voice.packed)
