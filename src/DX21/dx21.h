@@ -5,7 +5,9 @@
 #define DX21_H
 
 #include <array>
-#include <sstream>
+#include <vector>
+#include <string>
+#include <cstdint>
 
 #include "dx21_voice.h"
 
@@ -15,13 +17,12 @@
 class dx21
 {
 public:
-    friend std::ostream& operator<<(std::ostream&, const dx21&);
-    friend std::istream& operator>>(std::istream&, dx21&);
     mutable bool packed;
 
     bool writeFile(const std::string&);
-    std::vector<uint8_t> writeMessage();
+    void writeMessage(std::vector<uint8_t>&);
     bool readFile(const std::string&);
+    void readMessage(std::vector<uint8_t>&);
 
 private:
     std::array<float, 64> frequency_ratios = { 0.50,  0.71,  0.78,  0.87,  1.00,  1.41,
@@ -37,8 +38,6 @@ private:
                                               22.49, 23.55, 24.22, 25.95 };
     std::array<dx21_voice, 32> dx21_voices;
     dx21_voice voice_buffer;
-    std::stringstream ss;
-    std::vector<uint8_t> m_message;
 };
 
 #endif // DX21_H

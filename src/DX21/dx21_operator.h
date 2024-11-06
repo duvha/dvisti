@@ -1,15 +1,14 @@
 #ifndef DX21_OPERATOR_H
 #define DX21_OPERATOR_H
 
-#include <stdint.h>
-#include <fstream>
+#include <cstdint>
+#include <vector>
 
 class dx21_operator
 {
 public:
-     std::vector<uint8_t> writeMessage();
-     friend std::ostream& operator<<(std::ostream&, const dx21_operator&);
-     friend std::istream& operator>>(std::istream&, dx21_operator&);
+     void writeMessage(std::vector<uint8_t>&);
+     void readMessage(std::vector<uint8_t>&);
      mutable bool packed;
 
 private:

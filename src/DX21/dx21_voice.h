@@ -4,8 +4,6 @@
 #ifndef DX21_VOICE_H
 #define DX21_VOICE_H
 
-#include <iostream>
-#include <iomanip>
 #include <array>
 #include <vector>
 #include <cstdint>
@@ -36,13 +34,10 @@ public:
      */
     ~dx21_voice();
 
-    friend std::ostream& operator<<(std::ostream&, const dx21_voice&);
-    std::vector<uint8_t> writeMessage();
-    friend std::istream& operator>>(std::istream&, dx21_voice&);
-
+    void writeMessage(std::vector<uint8_t>&);
+    void readMessage(std::vector<uint8_t>&);
 
 private:
-    std::vector<uint8_t> m_message;
     std::array<int, 4> op_order {4, 2, 3, 1};
     std::array<dx21_operator, 4> dx21_operators;
 
