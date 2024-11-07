@@ -13,7 +13,7 @@ void dx21_operator::writeMessage(std::vector<uint8_t>& op_data)
         op_data.push_back(scaling_level);
         if (packed)
         {
-                ch = ((amplitude_modulation & 0x1) << 6) & ((eg_bias_sensitivity & 0x7) << 3) & (key_velocity & 0x7);
+                ch = ((amplitude_modulation & 0x1) << 6) | ((eg_bias_sensitivity & 0x7) << 3) | (key_velocity & 0x7);
                 op_data.push_back(ch);
         }
         else
@@ -27,7 +27,7 @@ void dx21_operator::writeMessage(std::vector<uint8_t>& op_data)
         op_data.push_back(oscillator_frequency);
         if (packed)
         {
-                ch = ((scaling_rate & 0x3) << 3) & (detune & 0x7);
+                ch = ((scaling_rate & 0x3) << 3) | (detune & 0x7);
                 op_data.push_back(ch);
         }
         else
@@ -36,42 +36,40 @@ void dx21_operator::writeMessage(std::vector<uint8_t>& op_data)
         }
 }
 
-void dx21_operator::readMessage(std::vector<uint8_t>& message)
+void dx21_operator::readMessage(std::vector<uint8_t>& message, size_t& pos)
 {
-/*
         uint8_t ch;
 
-        input >> op.attack_rate
-        >> op.decay1_rate
-        >> op.decay2_rate
-        >> op.release_rate
-        >> op.decay1_level
-        >> op.scaling_level;
-        if (op.packed)
+        attack_rate = message[pos++];
+        decay1_rate = message[pos++];
+        decay2_rate = message[pos++];
+        release_rate = message[pos++];
+        decay1_level = message[pos++];
+        scaling_level = message[pos++];
+        if (packed)
         {
-                input >> ch;
-                op.key_velocity = ch & 0x7;
-                op.eg_bias_sensitivity = (ch >> 3) & 0x7;
-                op.amplitude_modulation = (ch >> 6) & 0x1;
+                ch = message[pos++];;
+                key_velocity = ch & 0x7;
+                eg_bias_sensitivity = (ch >> 3) & 0x7;
+                amplitude_modulation = (ch >> 6) & 0x1;
         }
         else
         {
-                input >> op.scaling_rate
-                >> op.eg_bias_sensitivity
-                >> op.amplitude_modulation
-                >> op.key_velocity;
+                scaling_rate = message[pos++];
+                eg_bias_sensitivity = message[pos++];
+                amplitude_modulation = message[pos++];
+                key_velocity = message[pos++];
         }
-        input >> op.output_level
-        >> op.oscillator_frequency;
-        if (op.packed)
+        output_level = message[pos++];
+        oscillator_frequency = message[pos++];
+        if (packed)
         {
-                input >> ch;
-                op.scaling_rate = (ch >> 3) & 0x3;
-                op.detune = ch & 0x7;
+                ch = message[pos++];;
+                scaling_rate = (ch >> 3) & 0x3;
+                detune = ch & 0x7;
         }
         else
         {
-                input >> op.detune;
+                detune = message[pos++];;
         }
-*/
 }

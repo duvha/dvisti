@@ -35,10 +35,10 @@ public:
     ~dx21_voice();
 
     void writeMessage(std::vector<uint8_t>&);
-    void readMessage(std::vector<uint8_t>&);
+    void readMessage(std::vector<uint8_t>&, size_t&);
 
 private:
-    std::array<int, 4> op_order {4, 2, 3, 1};
+    std::array<int, 4> op_order {3, 1, 2, 0};
     std::array<dx21_operator, 4> dx21_operators;
 
     uint8_t algorithm;
