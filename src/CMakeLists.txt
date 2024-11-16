@@ -26,6 +26,8 @@ set(PROJECT_SOURCES
         DX21/dx21_voice.cpp
         DX21/dx21.h
         DX21/dx21.cpp
+        data.h
+        data.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
