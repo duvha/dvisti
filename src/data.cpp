@@ -35,6 +35,8 @@ uint8_t Data::maximum() const
 
 void Data::setMaximum(uint8_t& maximum)
 {
+    if (maximum > 99) maximum = 99;
+
     if (m_maximum == maximum) {
         return;
     }
@@ -49,6 +51,8 @@ uint8_t Data::minimum() const
 
 void Data::setMinimum(uint8_t& minimum)
 {
+    if (minimum < 0) minimum = 0;
+
     if (m_minimum == minimum) {
         return;
     }
@@ -62,3 +66,9 @@ void Data::setRange(uint8_t& minimum, uint8_t& maximum)
     setMaximum(maximum);
 }
 
+Data& Data::operator=(uint8_t& value)
+{
+    setValue(value);
+
+    return *this;
+}

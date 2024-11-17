@@ -8,6 +8,7 @@
 #include <vector>
 #include <cstdint>
 
+#include "../data.h"
 #include "dx21_operator.h"
 
 /**
@@ -17,23 +18,8 @@ class dx21_voice
 {
 public:
     mutable bool packed;
-    /**
-     * Default constructor
-     */
+
     dx21_voice();
-
-    /**
-     * Copy constructor
-     *
-     * @param other TODO
-     */
-    dx21_voice(const dx21_voice& other);
-
-    /**
-     * Destructor
-     */
-    ~dx21_voice();
-
     void writeMessage(std::vector<uint8_t>&);
     void readMessage(std::vector<uint8_t>&, size_t&);
 
@@ -41,38 +27,38 @@ private:
     std::array<int, 4> op_order {3, 1, 2, 0};
     std::array<dx21_operator, 4> dx21_operators;
 
-    uint8_t algorithm;
-    uint8_t feedback_level;
-    uint8_t lfo_speed;
-    uint8_t lfo_delay;
-    uint8_t lfo_pitch_modulation_depth;
-    uint8_t lfo_amplitude_modulation_depth;
-    uint8_t lfo_sync;
-    uint8_t lfo_wave;
-    uint8_t pitch_modulation_sensitivity;
-    uint8_t amplitude_modulation_sensitivity;
-    uint8_t transpose;
-    uint8_t play_mode;
-    uint8_t pitch_bend_range;
-    uint8_t portamento_mode;
-    uint8_t portamento_time;
-    uint8_t foot_volume;
-    bool sustain_foot_switch;
-    bool portamento_foot_switch;
-    bool chorus_switch;
-    uint8_t mw_pitch_modulation_range;
-    uint8_t mw_amplitude_modulation_range;
-    uint8_t bc_pitch_modulation_range;
-    uint8_t bc_amplitude_modulation_range;
-    uint8_t bc_pitch_bias_range;
-    uint8_t bc_eg_bias_range;
+    Data algorithm;
+    Data feedback_level;
+    Data lfo_speed;
+    Data lfo_delay;
+    Data lfo_pitch_modulation_depth;
+    Data lfo_amplitude_modulation_depth;
+    Data lfo_sync;
+    Data lfo_wave;
+    Data pitch_modulation_sensitivity;
+    Data amplitude_modulation_sensitivity;
+    Data transpose;
+    Data play_mode;
+    Data pitch_bend_range;
+    Data portamento_mode;
+    Data portamento_time;
+    Data foot_volume;
+    Data sustain_foot_switch;
+    Data portamento_foot_switch;
+    Data chorus_switch;
+    Data mw_pitch_modulation_range;
+    Data mw_amplitude_modulation_range;
+    Data bc_pitch_modulation_range;
+    Data bc_amplitude_modulation_range;
+    Data bc_pitch_bias_range;
+    Data bc_eg_bias_range;
     std::array<uint8_t, 10> voice_name;
-    uint8_t pitch_eg_rate1;
-    uint8_t pitch_eg_rate2;
-    uint8_t pitch_eg_rate3;
-    uint8_t pitch_eg_level1;
-    uint8_t pitch_eg_level2;
-    uint8_t pitch_eg_level3;
+    Data pitch_eg_rate1;
+    Data pitch_eg_rate2;
+    Data pitch_eg_rate3;
+    Data pitch_eg_level1;
+    Data pitch_eg_level2;
+    Data pitch_eg_level3;
 };
 
 #endif // DX21_VOICE_H

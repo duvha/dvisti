@@ -4,27 +4,29 @@
 #include <cstdint>
 #include <vector>
 
+#include "../data.h"
+
 class dx21_operator
 {
 public:
-     void writeMessage(std::vector<uint8_t>&);
-     void readMessage(std::vector<uint8_t>&, size_t&);
+     dx21_operator();
+     void writeMessage(std::vector<uint8_t>& );
+     void readMessage(std::vector<uint8_t>&, size_t& );
      mutable bool packed;
 
-private:
-     uint8_t attack_rate;
-     uint8_t decay1_rate;
-     uint8_t decay2_rate;
-     uint8_t release_rate;
-     uint8_t decay1_level;
-     uint8_t scaling_level;
-     uint8_t scaling_rate;
-     uint8_t eg_bias_sensitivity;
-     bool amplitude_modulation;
-     uint8_t key_velocity;
-     uint8_t output_level;
-     uint8_t oscillator_frequency;
-     uint8_t detune;
+     Data attack_rate;
+     Data decay1_rate;
+     Data decay2_rate;
+     Data release_rate;
+     Data decay1_level;
+     Data scaling_level;
+     Data scaling_rate;
+     Data eg_bias_sensitivity;
+     Data amplitude_modulation;
+     Data key_velocity;
+     Data output_level;
+     Data oscillator_frequency;
+     Data detune;
 };
 
 #endif // DX21_OPERATOR_H

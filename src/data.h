@@ -21,16 +21,16 @@ class Data : public QObject
 public:
 
     Data(uint8_t value, uint8_t minimum = 0, uint8_t maximum = 99);
-     uint8_t value() const;
-     uint8_t minimum() const;
-     uint8_t maximum() const;
-     void setMaximum(uint8_t& );
-     void setMinimum(uint8_t& );
-     void setRange(uint8_t& , uint8_t& );
-
+    uint8_t value() const;
+    uint8_t minimum() const;
+    uint8_t maximum() const;
+    void setMaximum(uint8_t& );
+    void setMinimum(uint8_t& );
+    void setRange(uint8_t& , uint8_t& );
+    Data& operator=(uint8_t& );
 
 public Q_SLOTS:
-    void setValue(uint8_t& value);
+    void setValue(uint8_t& );
 
 Q_SIGNALS:
     void valueChanged(uint8_t& );
