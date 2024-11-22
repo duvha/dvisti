@@ -9,6 +9,7 @@ class QMenu;
 class QLabel;
 
 #include "DX21/dx21.h"
+#include "rtmidi/RtMidi.h"
 
 class MainWindow : public QMainWindow
 {
@@ -29,6 +30,9 @@ private:
     bool saveFile(const QString& fileName);
 
     dx21 m_dx21;
+    RtMidiIn* midi_in;
+    RtMidiOut* midi_out;
+
     QAction* openAction;
     QAction* newAction;
     QAction* saveAction;
