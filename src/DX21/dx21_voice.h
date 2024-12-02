@@ -20,8 +20,8 @@ public:
     mutable bool packed;
 
     dx21_voice();
+    void readMessage(std::vector<uint8_t>&, int&, bool);
     void writeMessage(std::vector<uint8_t>&);
-    void readMessage(std::vector<uint8_t>&, size_t&);
 
 private:
     std::array<int, 4> op_order {3, 1, 2, 0};

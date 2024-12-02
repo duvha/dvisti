@@ -33,6 +33,10 @@ MainWindow::MainWindow(QWidget *parent)
     createActions();
     createMenus();
 
+    timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, this, &MainWindow::getMessage);
+    timer->start(10);
+
     setWindowTitle(tr("Dvisti"));
     setMinimumSize(160, 160);
     resize(480, 320);
@@ -48,12 +52,12 @@ void MainWindow::newFile()
     infoLabel->setText(tr("Invoked <b>File|New</b>"));
 }
 
-void MainWindow::open()
+void MainWindow::load()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
                                                     tr("Open System Exclusive files"), ".",
                                                     tr("SysEx files (*.syx)"));
-    if (!fileName.isEmpty()) loadFile(fileName); //m_dx21.readFile(fileName.toStdString());
+    if (!fileName.isEmpty()) loadFile(fileName);
 }
 
 bool MainWindow::loadFile(const QString& fileName)
@@ -61,8 +65,12 @@ bool MainWindow::loadFile(const QString& fileName)
     if (!m_dx21.readFile(fileName.toStdString())) {
         return false;
     }
-
     return true;
+}
+
+void MainWindow::getMessage()
+{
+    m_dx21.getMessage();
 }
 
 void MainWindow::save()
@@ -82,6 +90,32 @@ bool MainWindow::saveFile(const QString& fileName)
     return true;
 }
 
+/*void MainWindow::sendMessage()
+{
+    m_dx21.sendMessage();
+}
+
+void MainWindow::sendSingle()
+{
+    m_dx21.sendSingle();
+}
+
+void MainWindow::sendBulk()
+{
+    m_dx21.sendMessage();
+}
+
+void MainWindow::requestSingle()
+{
+    m_dx21.requestSingle();
+}
+
+void MainWindow::requestBulk()
+{
+    m_dx21.requestBulk();
+}
+*/
+
 void MainWindow::createActions()
 {
     newAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
@@ -91,17 +125,41 @@ void MainWindow::createActions()
     connect(newAction, &QAction::triggered, this, &MainWindow::newFile);
 
     openAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentOpen),
-                          tr("&Open..."), this);
+                          tr("&Load..."), this);
     openAction->setShortcuts(QKeySequence::Open);
     openAction->setStatusTip(tr("Open an existing file"));
     //connect(openAction, &QAction::triggered, this, &MainWindow::open);
-    connect(openAction, SIGNAL(triggered()), this, SLOT(open()));
+    connect(openAction, SIGNAL(triggered()), this, SLOT(load()));
 
     saveAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentSave),
                           tr("&Save"), this);
     saveAction->setShortcuts(QKeySequence::Save);
     saveAction->setStatusTip(tr("Save the document to disk"));
     connect(saveAction, &QAction::triggered, this, &MainWindow::save);
+
+    sendSingleAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
+                            tr("&Send Single Voice"), this);
+    //sendSingleAction->setShortcuts(QKeySequence::New);
+    sendSingleAction->setStatusTip(tr("Send a Single Voice"));
+    //connect(sendSingleAction, &QAction::triggered, this, &MainWindow::sendSingle);
+
+    sendBulkAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
+                            tr("Send &Bulk Voices"), this);
+    //sendBulkAction->setShortcuts(QKeySequence::New);
+    sendBulkAction->setStatusTip(tr("Send Bulk Voices"));
+    //connect(sendBulkAction, &QAction::triggered, this, &MainWindow::sendBulk);
+
+    requestSingleAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
+                            tr("Request Single Voice"), this);
+    //requestSingleAction->setShortcuts(QKeySequence::New);
+    requestSingleAction->setStatusTip(tr("Request a Single Voice"));
+    //connect(requestSingleAction, &QAction::triggered, this, &MainWindow::requestSingle);
+
+    requestBulkAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
+                            tr("&Request Bulk Voices"), this);
+    //requestBulkAction->setShortcuts(QKeySequence::New);
+    requestBulkAction->setStatusTip(tr("Request Bulk Voices"));
+    //connect(requestBulkAction, &QAction::triggered, this, &MainWindow::requestBulk);
 }
 
 void MainWindow::createMenus()
@@ -110,4 +168,9 @@ void MainWindow::createMenus()
     fileMenu->addAction(newAction);
     fileMenu->addAction(openAction);
     fileMenu->addAction(saveAction);
+    midiMenu = menuBar()->addMenu(tr("&Midi"));
+    midiMenu->addAction(sendSingleAction);
+    midiMenu->addAction(sendBulkAction);
+    midiMenu->addAction(requestSingleAction);
+    midiMenu->addAction(requestBulkAction);
 }

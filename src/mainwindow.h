@@ -7,9 +7,9 @@
 class QAction;
 class QMenu;
 class QLabel;
+class QTimer;
 
 #include "DX21/dx21.h"
-#include "rtmidi/RtMidi.h"
 
 class MainWindow : public QMainWindow
 {
@@ -20,8 +20,16 @@ public:
 
 private slots:
     void newFile();
-    void open();
+    //void open();
     void save();
+    void getMessage();
+    void load();
+    //void saveSingle();
+    //void saveBulk();
+    //void sendSingle();
+    //void sendBulk();
+    //void requestSingle();
+    //void requestBulk();
 
 private:
     void createActions();
@@ -30,14 +38,18 @@ private:
     bool saveFile(const QString& fileName);
 
     dx21 m_dx21;
-    RtMidiIn* midi_in;
-    RtMidiOut* midi_out;
 
     QAction* openAction;
     QAction* newAction;
     QAction* saveAction;
     QAction* exitAction;
+    QAction* sendSingleAction;
+    QAction* sendBulkAction;
+    QAction* requestSingleAction;
+    QAction* requestBulkAction;
     QMenu* fileMenu;
+    QMenu* midiMenu;
     QLabel* infoLabel;
+    QTimer* timer;
 };
 #endif // MAINWINDOW_H

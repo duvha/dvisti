@@ -10,6 +10,7 @@
 #include <cstdint>
 
 #include "dx21_voice.h"
+#include "rtmidi/RtMidi.h"
 
 /**
  * @todo write docs
@@ -17,12 +18,20 @@
 class dx21
 {
 public:
-    mutable bool packed;
+    dx21();
+    ~dx21();
+
+    //mutable bool packed;
 
     bool writeFile(const std::string&);
-    void writeMessage(std::vector<uint8_t>&);
+    void writeMessage();
     bool readFile(const std::string&);
-    void readMessage(std::vector<uint8_t>&);
+    void readMessage();
+    void sendMessage();
+    void getMessage();
+    void sendSingle();
+    void requestSingle();
+    void requestBulk();
 
 private:
     std::array<float, 64> frequency_ratios = { 0.50,  0.71,  0.78,  0.87,  1.00,  1.41,
@@ -38,6 +47,10 @@ private:
                                               22.49, 23.55, 24.22, 25.95 };
     std::array<dx21_voice, 32> dx21_voices;
     dx21_voice voice_buffer;
+    std::vector<uint8_t> m_message;
+    std::vector<uint8_t> m_parameters;
+    RtMidiIn* midi_in;
+    RtMidiOut* midi_out;
 };
 
 #endif // DX21_H

@@ -10,8 +10,8 @@ class dx21_operator
 {
 public:
      dx21_operator();
+     void readMessage(std::vector<uint8_t>&, int&, bool );
      void writeMessage(std::vector<uint8_t>& );
-     void readMessage(std::vector<uint8_t>&, size_t& );
      mutable bool packed;
 
      Data attack_rate;

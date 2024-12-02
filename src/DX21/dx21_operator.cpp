@@ -18,43 +18,7 @@ dx21_operator::dx21_operator()
 
 }
 
-void dx21_operator::writeMessage(std::vector<uint8_t>& op_data)
-{
-        op_data.clear();
-        uint8_t ch;
-
-        op_data.push_back(attack_rate.value());
-        op_data.push_back(decay1_rate.value());
-        op_data.push_back(decay2_rate.value());
-        op_data.push_back(release_rate.value());
-        op_data.push_back(decay1_level.value());
-        op_data.push_back(scaling_level.value());
-        if (packed)
-        {
-                ch = ((amplitude_modulation.value() & 0x1) << 6) | ((eg_bias_sensitivity.value() & 0x7) << 3) | (key_velocity.value() & 0x7);
-                op_data.push_back(ch);
-        }
-        else
-        {
-                op_data.push_back(scaling_rate.value());
-                op_data.push_back(eg_bias_sensitivity.value());
-                op_data.push_back(amplitude_modulation.value());
-                op_data.push_back(key_velocity.value());
-        }
-        op_data.push_back(output_level.value());
-        op_data.push_back(oscillator_frequency.value());
-        if (packed)
-        {
-                ch = ((scaling_rate.value() & 0x3) << 3) | (detune.value() & 0x7);
-                op_data.push_back(ch);
-        }
-        else
-        {
-                op_data.push_back(detune.value());
-        }
-}
-
-void dx21_operator::readMessage(std::vector<uint8_t>& message, size_t& pos)
+void dx21_operator::readMessage(std::vector<uint8_t>& message, int& pos, bool packed)
 {
         uint8_t ch, temp;
 
@@ -94,5 +58,41 @@ void dx21_operator::readMessage(std::vector<uint8_t>& message, size_t& pos)
         else
         {
                 detune = message[pos++];;
+        }
+}
+
+void dx21_operator::writeMessage(std::vector<uint8_t>& op_data)
+{
+        op_data.clear();
+        uint8_t ch;
+
+        op_data.push_back(attack_rate.value());
+        op_data.push_back(decay1_rate.value());
+        op_data.push_back(decay2_rate.value());
+        op_data.push_back(release_rate.value());
+        op_data.push_back(decay1_level.value());
+        op_data.push_back(scaling_level.value());
+        if (packed)
+        {
+                ch = ((amplitude_modulation.value() & 0x1) << 6) | ((eg_bias_sensitivity.value() & 0x7) << 3) | (key_velocity.value() & 0x7);
+                op_data.push_back(ch);
+        }
+        else
+        {
+                op_data.push_back(scaling_rate.value());
+                op_data.push_back(eg_bias_sensitivity.value());
+                op_data.push_back(amplitude_modulation.value());
+                op_data.push_back(key_velocity.value());
+        }
+        op_data.push_back(output_level.value());
+        op_data.push_back(oscillator_frequency.value());
+        if (packed)
+        {
+                ch = ((scaling_rate.value() & 0x3) << 3) | (detune.value() & 0x7);
+                op_data.push_back(ch);
+        }
+        else
+        {
+                op_data.push_back(detune.value());
         }
 }

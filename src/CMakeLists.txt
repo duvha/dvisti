@@ -13,7 +13,7 @@ set(CMAKE_PREFIX_PATH "/lib/qt6")
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
-find_package(RtMidi)
+#find_package(RtMidi)
 
 qt_standard_project_setup()
 
@@ -29,6 +29,8 @@ set(PROJECT_SOURCES
         DX21/dx21.cpp
         data.h
         data.cpp
+        rtmidi/RtMidi.h
+        rtmidi/RtMidi.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -54,9 +56,8 @@ else()
     endif()
 endif()
 
+#target_include_directories(Dvisti PUBLIC "rtmidi")
 target_link_libraries(Dvisti PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-
-target_include_directories(Dvisti PUBLIC "rtmidi")
 #add_subdirectory(rtmidi)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
