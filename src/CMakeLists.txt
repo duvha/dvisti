@@ -58,6 +58,13 @@ endif()
 
 #target_include_directories(Dvisti PUBLIC "rtmidi")
 target_link_libraries(Dvisti PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+#add_compile_definitions(__UNIX_JACK__)
+add_compile_definitions(__LINUX_ALSA__)
+#target_link_libraries(Dvisti PRIVATE jack)
+target_link_libraries(Dvisti PRIVATE asound)
+target_link_libraries(Dvisti PRIVATE pthread)
+
+
 #add_subdirectory(rtmidi)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

@@ -51,6 +51,8 @@ void dx21::readMessage()
     int pos=0;
     bool packed;
 
+    if (m_message.empty()) return;
+
     ch = m_message[pos++]; //0xf0
     if (ch != 0xf0) return; // not a sysex file
 
@@ -78,6 +80,7 @@ void dx21::readMessage()
             {
                 voice_buffer.readMessage(m_message, pos, packed);
                 m_parameters.clear();
+                //m_parameters.resize(93);
                 std::copy(m_message.begin()+6, m_message.begin()+6+93, std::back_inserter(m_parameters));
             }
 
