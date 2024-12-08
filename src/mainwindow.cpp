@@ -75,12 +75,12 @@ void MainWindow::getMessage()
 
 void MainWindow::saveSingle()
 {
-    save(true);
+    save(false);
 }
 
 void MainWindow::saveBulk()
 {
-    save(false);
+    save(true);
 }
 
 void MainWindow::save(bool packed)

@@ -28,6 +28,7 @@ bool dx21::readFile(const std::string& filename)
 {
     std::ifstream file(filename, std::ifstream::binary | std::ifstream::in);
     if (!file.is_open()) return false;
+    file.unsetf(std::ios::skipws);
     m_message.clear();
     m_message.insert(m_message.begin(), std::istream_iterator<unsigned char>(file), std::istream_iterator<unsigned char>());
     file.close();
@@ -123,22 +124,22 @@ void dx21::sendMessage(int message)
 
 void dx21::sendSingle()
 {
-    sendMessage(message::m_outSingle);
+    sendMessage(out_message::m_outSingle);
 }
 
 void dx21::sendBulk()
 {
-    sendMessage(message::m_outBulk);
+    sendMessage(out_message::m_outBulk);
 }
 
 void dx21::requestSingle()
 {
-    sendMessage(message::m_requestSingle);
+    sendMessage(out_message::m_requestSingle);
 }
 
 void dx21::requestBulk()
 {
-    sendMessage(message::m_requestBulk);
+    sendMessage(out_message::m_requestBulk);
 }
 
 void dx21::writeMessage(int message)
@@ -151,8 +152,8 @@ void dx21::writeMessage(int message)
     m_message.push_back(0x43);
     switch (message)
     {
-        case message::m_outSingle:
-        case message::m_outBulk:
+        case out_message::m_outSingle:
+        case out_message::m_outBulk:
             bool packed;
             if (message == m_outSingle) packed = false;
             else packed = true;
@@ -184,7 +185,7 @@ void dx21::writeMessage(int message)
             }
             else
             {
-                voice_buffer.writeMessage(voice_data, false);
+                voice_buffer.writeMessage(voice_data, packed);
                 for (std::vector<uint8_t>::iterator it = voice_data.begin(); it < voice_data.end(); ++it)
                 {
                     m_message.push_back(*it);
@@ -196,13 +197,13 @@ void dx21::writeMessage(int message)
 
             break;
 
-        case message::m_requestSingle:
+        case out_message::m_requestSingle:
             m_message.push_back(0x20);
             m_message.push_back(0x03);
 
             break;
 
-        case message::m_requestBulk:
+        case out_message::m_requestBulk:
             m_message.push_back(0x20);
             m_message.push_back(0x04);
 
