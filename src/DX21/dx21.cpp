@@ -194,19 +194,16 @@ void dx21::writeMessage(int message)
             }
             checksum = (~checksum + 1) & 0x7f;
             m_message.push_back(checksum);
-
             break;
 
         case out_message::m_requestSingle:
             m_message.push_back(0x20);
             m_message.push_back(0x03);
-
             break;
 
         case out_message::m_requestBulk:
             m_message.push_back(0x20);
             m_message.push_back(0x04);
-
             break;
     }
     m_message.push_back(0xf7);
