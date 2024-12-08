@@ -135,7 +135,7 @@ void dx21_voice::readMessage(std::vector<uint8_t>& message, int& pos, bool packe
     if (packed) pos += 55;
 }
 
-void dx21_voice::writeMessage(std::vector<uint8_t>& voice_data)
+void dx21_voice::writeMessage(std::vector<uint8_t>& voice_data, bool packed)
 {
     voice_data.clear();
     uint8_t ch;

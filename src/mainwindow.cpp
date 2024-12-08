@@ -73,26 +73,32 @@ void MainWindow::getMessage()
     m_dx21.getMessage();
 }
 
-void MainWindow::save()
+void MainWindow::saveSingle()
+{
+    save(true);
+}
+
+void MainWindow::saveBulk()
+{
+    save(false);
+}
+
+void MainWindow::save(bool packed)
 {
     QString fileName = QFileDialog::getSaveFileName(this,
                                                     tr("Save System Exclusive files"), ".",
                                                     tr("SysEx files (*.syx)"));
-    if (!fileName.isEmpty()) saveFile(fileName);
+    if (!fileName.isEmpty()) saveFile(fileName, packed);
 }
 
-bool MainWindow::saveFile(const QString& fileName)
+bool MainWindow::saveFile(const QString& fileName, bool packed)
 {
-    if (!m_dx21.writeFile(fileName.toStdString())) {
+    if (!m_dx21.writeFile(fileName.toStdString(), packed))
+    {
         return false;
     }
 
     return true;
-}
-
-/*void MainWindow::sendMessage()
-{
-    m_dx21.sendMessage();
 }
 
 void MainWindow::sendSingle()
@@ -102,7 +108,7 @@ void MainWindow::sendSingle()
 
 void MainWindow::sendBulk()
 {
-    m_dx21.sendMessage();
+    m_dx21.sendBulk();
 }
 
 void MainWindow::requestSingle()
@@ -114,7 +120,6 @@ void MainWindow::requestBulk()
 {
     m_dx21.requestBulk();
 }
-*/
 
 void MainWindow::createActions()
 {
@@ -131,35 +136,44 @@ void MainWindow::createActions()
     //connect(openAction, &QAction::triggered, this, &MainWindow::open);
     connect(openAction, SIGNAL(triggered()), this, SLOT(load()));
 
-    saveAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentSave),
-                          tr("&Save"), this);
-    saveAction->setShortcuts(QKeySequence::Save);
-    saveAction->setStatusTip(tr("Save the document to disk"));
-    connect(saveAction, &QAction::triggered, this, &MainWindow::save);
+    saveSingleAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentSave),
+                          tr("&Save Single Voice"), this);
+    saveSingleAction->setShortcuts(QKeySequence::Save);
+    saveSingleAction->setStatusTip(tr("Save single voice"));
+    connect(saveSingleAction, &QAction::triggered, this, &MainWindow::saveSingle);
 
-    sendSingleAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
+    saveBulkAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentSave),
+                                   tr("&Save Bulk Voices"), this);
+    saveBulkAction->setShortcuts(QKeySequence::Save);
+    saveBulkAction->setStatusTip(tr("Save bulk voice"));
+    connect(saveBulkAction, &QAction::triggered, this, &MainWindow::saveBulk);
+
+    sendBulkAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
                             tr("&Send Single Voice"), this);
+
+    sendSingleAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentSave),
+                                 tr("&Send Single Voice"), this);
     //sendSingleAction->setShortcuts(QKeySequence::New);
     sendSingleAction->setStatusTip(tr("Send a Single Voice"));
-    //connect(sendSingleAction, &QAction::triggered, this, &MainWindow::sendSingle);
+    connect(sendSingleAction, &QAction::triggered, this, &MainWindow::sendSingle);
 
     sendBulkAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
                             tr("Send &Bulk Voices"), this);
     //sendBulkAction->setShortcuts(QKeySequence::New);
     sendBulkAction->setStatusTip(tr("Send Bulk Voices"));
-    //connect(sendBulkAction, &QAction::triggered, this, &MainWindow::sendBulk);
+    connect(sendBulkAction, &QAction::triggered, this, &MainWindow::sendBulk);
 
     requestSingleAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
                             tr("Request Single Voice"), this);
     //requestSingleAction->setShortcuts(QKeySequence::New);
     requestSingleAction->setStatusTip(tr("Request a Single Voice"));
-    //connect(requestSingleAction, &QAction::triggered, this, &MainWindow::requestSingle);
+    connect(requestSingleAction, &QAction::triggered, this, &MainWindow::requestSingle);
 
     requestBulkAction = new QAction(QIcon::fromTheme(QIcon::ThemeIcon::DocumentNew),
                             tr("&Request Bulk Voices"), this);
     //requestBulkAction->setShortcuts(QKeySequence::New);
     requestBulkAction->setStatusTip(tr("Request Bulk Voices"));
-    //connect(requestBulkAction, &QAction::triggered, this, &MainWindow::requestBulk);
+    connect(requestBulkAction, &QAction::triggered, this, &MainWindow::requestBulk);
 }
 
 void MainWindow::createMenus()
@@ -167,7 +181,8 @@ void MainWindow::createMenus()
     fileMenu = menuBar()->addMenu(tr("&File"));
     fileMenu->addAction(newAction);
     fileMenu->addAction(openAction);
-    fileMenu->addAction(saveAction);
+    fileMenu->addAction(saveSingleAction);
+    fileMenu->addAction(saveBulkAction);
     midiMenu = menuBar()->addMenu(tr("&Midi"));
     midiMenu->addAction(sendSingleAction);
     midiMenu->addAction(sendBulkAction);

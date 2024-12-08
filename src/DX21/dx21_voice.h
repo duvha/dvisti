@@ -17,11 +17,9 @@
 class dx21_voice
 {
 public:
-    mutable bool packed;
-
     dx21_voice();
     void readMessage(std::vector<uint8_t>&, int&, bool);
-    void writeMessage(std::vector<uint8_t>&);
+    void writeMessage(std::vector<uint8_t>&, bool );
 
 private:
     std::array<int, 4> op_order {3, 1, 2, 0};

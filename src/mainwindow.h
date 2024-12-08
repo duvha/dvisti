@@ -21,27 +21,28 @@ public:
 private slots:
     void newFile();
     //void open();
-    void save();
+    void save(bool);
     void getMessage();
     void load();
-    //void saveSingle();
-    //void saveBulk();
-    //void sendSingle();
-    //void sendBulk();
-    //void requestSingle();
-    //void requestBulk();
+    void saveSingle();
+    void saveBulk();
+    void sendSingle();
+    void sendBulk();
+    void requestSingle();
+    void requestBulk();
 
 private:
     void createActions();
     void createMenus();
     bool loadFile(const QString& fileName);
-    bool saveFile(const QString& fileName);
+    bool saveFile(const QString& fileName, bool );
 
     dx21 m_dx21;
 
     QAction* openAction;
     QAction* newAction;
-    QAction* saveAction;
+    QAction* saveSingleAction;
+    QAction* saveBulkAction;
     QAction* exitAction;
     QAction* sendSingleAction;
     QAction* sendBulkAction;

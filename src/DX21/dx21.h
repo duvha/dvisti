@@ -23,17 +23,19 @@ public:
 
     //mutable bool packed;
 
-    bool writeFile(const std::string&);
-    void writeMessage();
-    bool readFile(const std::string&);
+    bool writeFile(const std::string& , int );
+    void writeMessage(int );
+    bool readFile(const std::string& );
     void readMessage();
-    void sendMessage();
+    void sendMessage(int );
     void getMessage();
     void sendSingle();
+    void sendBulk();
     void requestSingle();
     void requestBulk();
 
 private:
+    enum message {m_outSingle, m_outBulk, m_requestSingle, m_requestBulk};
     std::array<float, 64> frequency_ratios = { 0.50,  0.71,  0.78,  0.87,  1.00,  1.41,
                                                1.57,  1.73,  2.00,  2.82,  3.00,  3.14,
                                                3.46,  4.00,  4.24,  4.71,  5.00,  5.19,
