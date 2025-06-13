@@ -10,10 +10,10 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    QWidget *widget = new QWidget;
-    setCentralWidget(widget);
+    w = new dx21_widget;
+    setCentralWidget(w);
 
-    QWidget *topFiller = new QWidget;
+/*    QWidget *topFiller = new QWidget;
     topFiller->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     infoLabel = new QLabel(tr("DX21"));
@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     layout->addWidget(infoLabel);
     layout->addWidget(bottomFiller);
     widget->setLayout(layout);
-
+*/
     createActions();
     createMenus();
 
@@ -40,6 +40,8 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowTitle(tr("Dvisti"));
     setMinimumSize(160, 160);
     resize(480, 320);
+
+    w->show();
 }
 
 MainWindow::~MainWindow()

@@ -8,8 +8,10 @@ class QAction;
 class QMenu;
 class QLabel;
 class QTimer;
+//class QWidget; //?? needed?
 
 #include "DX21/dx21.h"
+#include "DX21/dx21_widget.h"
 
 class MainWindow : public QMainWindow
 {
@@ -52,5 +54,6 @@ private:
     QMenu* midiMenu;
     QLabel* infoLabel;
     QTimer* timer;
+    dx21_widget* w;
 };
 #endif // MAINWINDOW_H
