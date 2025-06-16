@@ -13,1819 +13,1883 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_55">
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QLineEdit" name="lineEdit">
-         <property name="maxLength">
-          <number>10</number>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>Init</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="text">
-          <string>Chorus</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_13">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_59">
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_58">
-         <item>
-          <spacer name="verticalSpacer_5">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="spinBox">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_53">
-           <property name="text">
-            <string>algorithm</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_57">
-         <item>
-          <widget class="QSpinBox" name="spinBox_2">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_54">
-           <property name="text">
-            <string>feedback</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="1" column="8">
-        <layout class="QVBoxLayout" name="verticalLayout_9">
-         <item>
-          <widget class="QSpinBox" name="spinBox_releaseRate_1">
-           <property name="maximum">
-            <number>15</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_8">
-           <property name="text">
-            <string>release
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>6</x>
+     <y>6</y>
+     <width>987</width>
+     <height>756</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_67">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="maxLength">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Init</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string>Chorus</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_13">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_59">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_58">
+          <item>
+           <spacer name="verticalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_53">
+            <property name="text">
+             <string>algorithm</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_57">
+          <item>
+           <widget class="QSpinBox" name="spinBox_2">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_54">
+            <property name="text">
+             <string>feedback</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="8">
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QSpinBox" name="spinBox_releaseRate_1">
+            <property name="maximum">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>release
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="3">
-        <layout class="QVBoxLayout" name="verticalLayout_31">
-         <item>
-          <widget class="QSpinBox" name="spinBox_outputLevel_3"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_27">
-           <property name="text">
-            <string>output
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="3">
+         <layout class="QVBoxLayout" name="verticalLayout_31">
+          <item>
+           <widget class="QSpinBox" name="spinBox_outputLevel_3"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_27">
+            <property name="text">
+             <string>output
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="6">
-        <layout class="QVBoxLayout" name="verticalLayout_7">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay1Level_1">
-           <property name="maximum">
-            <number>15</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_6">
-           <property name="text">
-            <string>decay 1
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="6">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay1Level_1">
+            <property name="maximum">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>decay 1
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="1">
-        <layout class="QVBoxLayout" name="verticalLayout_16">
-         <item>
-          <widget class="QSpinBox" name="spinBox_frequency_2">
-           <property name="maximum">
-            <number>63</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_13">
-           <property name="text">
-            <string>frequency</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="12">
-        <layout class="QVBoxLayout" name="verticalLayout_53">
-         <item>
-          <widget class="QSpinBox" name="spinBox_egBias_4">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_48">
-           <property name="text">
-            <string>eg bias</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="10">
-        <layout class="QVBoxLayout" name="verticalLayout_51">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyScalingRate_4">
-           <property name="maximum">
-            <number>3</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_46">
-           <property name="text">
-            <string>key scaling
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_16">
+          <item>
+           <widget class="QSpinBox" name="spinBox_frequency_2">
+            <property name="maximum">
+             <number>63</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>frequency</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="12">
+         <layout class="QVBoxLayout" name="verticalLayout_53">
+          <item>
+           <widget class="QSpinBox" name="spinBox_egBias_4">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_48">
+            <property name="text">
+             <string>eg bias</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="10">
+         <layout class="QVBoxLayout" name="verticalLayout_51">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyScalingRate_4">
+            <property name="maximum">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_46">
+            <property name="text">
+             <string>key scaling
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="6">
-        <layout class="QVBoxLayout" name="verticalLayout_21">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay1Level_2">
-           <property name="maximum">
-            <number>15</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_18">
-           <property name="text">
-            <string>decay 1
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="6">
+         <layout class="QVBoxLayout" name="verticalLayout_21">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay1Level_2">
+            <property name="maximum">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>decay 1
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="3">
-        <layout class="QVBoxLayout" name="verticalLayout_18">
-         <item>
-          <widget class="QSpinBox" name="spinBox_outputLevel_2"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_15">
-           <property name="text">
-            <string>output
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="3">
+         <layout class="QVBoxLayout" name="verticalLayout_18">
+          <item>
+           <widget class="QSpinBox" name="spinBox_outputLevel_2"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>output
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="11">
-        <layout class="QVBoxLayout" name="verticalLayout_12">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyVelocity_1">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_11">
-           <property name="text">
-            <string>key
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="11">
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyVelocity_1">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>key
 velocity</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="4">
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <item>
-          <widget class="QSpinBox" name="spinBox_attackRate_1">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_4">
-           <property name="text">
-            <string>attack
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="4">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QSpinBox" name="spinBox_attackRate_1">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>attack
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="9" colspan="4">
-        <widget class="QLabel" name="label_51">
-         <property name="text">
-          <string>KEY FOLLOW</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="7">
-        <layout class="QVBoxLayout" name="verticalLayout_35">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay2Rate_3">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_31">
-           <property name="text">
-            <string>decay 2
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="9" colspan="4">
+         <widget class="QLabel" name="label_51">
+          <property name="text">
+           <string>KEY FOLLOW</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="7">
+         <layout class="QVBoxLayout" name="verticalLayout_35">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay2Rate_3">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_31">
+            <property name="text">
+             <string>decay 2
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="0" colspan="3">
-        <widget class="QLabel" name="label_49">
-         <property name="text">
-          <string>OPERATORS</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="10">
-        <layout class="QVBoxLayout" name="verticalLayout_25">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyScalingRate_2">
-           <property name="maximum">
-            <number>3</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_22">
-           <property name="text">
-            <string>key scaling
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QLabel" name="label_49">
+          <property name="text">
+           <string>OPERATORS</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="10">
+         <layout class="QVBoxLayout" name="verticalLayout_25">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyScalingRate_2">
+            <property name="maximum">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_22">
+            <property name="text">
+             <string>key scaling
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="7">
-        <layout class="QVBoxLayout" name="verticalLayout_22">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay2Rate_2">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_19">
-           <property name="text">
-            <string>decay 2
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="7">
+         <layout class="QVBoxLayout" name="verticalLayout_22">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay2Rate_2">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>decay 2
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="3">
-        <layout class="QVBoxLayout" name="verticalLayout_44">
-         <item>
-          <widget class="QSpinBox" name="spinBox_outputLevel_4"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_39">
-           <property name="text">
-            <string>output
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="3">
+         <layout class="QVBoxLayout" name="verticalLayout_44">
+          <item>
+           <widget class="QSpinBox" name="spinBox_outputLevel_4"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_39">
+            <property name="text">
+             <string>output
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="8">
-        <layout class="QVBoxLayout" name="verticalLayout_36">
-         <item>
-          <widget class="QSpinBox" name="spinBox_releaseRate_3">
-           <property name="maximum">
-            <number>15</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_32">
-           <property name="text">
-            <string>release
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="8">
+         <layout class="QVBoxLayout" name="verticalLayout_36">
+          <item>
+           <widget class="QSpinBox" name="spinBox_releaseRate_3">
+            <property name="maximum">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_32">
+            <property name="text">
+             <string>release
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="5">
-        <layout class="QVBoxLayout" name="verticalLayout_46">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay1Rate_4">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_41">
-           <property name="text">
-            <string>decay 1
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="5">
+         <layout class="QVBoxLayout" name="verticalLayout_46">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay1Rate_4">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_41">
+            <property name="text">
+             <string>decay 1
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout_15">
-         <item>
-          <widget class="QCheckBox" name="checkBox_operator1_2">
-           <property name="text">
-            <string>2</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="11">
-        <layout class="QVBoxLayout" name="verticalLayout_39">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyVelocity_3">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_35">
-           <property name="text">
-            <string>key
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_15">
+          <item>
+           <widget class="QCheckBox" name="checkBox_operator1_2">
+            <property name="text">
+             <string>2</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="11">
+         <layout class="QVBoxLayout" name="verticalLayout_39">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyVelocity_3">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_35">
+            <property name="text">
+             <string>key
 velocity</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="6">
-        <layout class="QVBoxLayout" name="verticalLayout_34">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay1Level_3">
-           <property name="maximum">
-            <number>15</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_30">
-           <property name="text">
-            <string>decay 1
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="6">
+         <layout class="QVBoxLayout" name="verticalLayout_34">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay1Level_3">
+            <property name="maximum">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_30">
+            <property name="text">
+             <string>decay 1
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout_28">
-         <item>
-          <widget class="QCheckBox" name="checkBox_operator1_3">
-           <property name="text">
-            <string>3</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="4">
-        <layout class="QVBoxLayout" name="verticalLayout_19">
-         <item>
-          <widget class="QSpinBox" name="spinBox_attackRate_2">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_16">
-           <property name="text">
-            <string>attack
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_28">
+          <item>
+           <widget class="QCheckBox" name="checkBox_operator1_3">
+            <property name="text">
+             <string>3</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="4">
+         <layout class="QVBoxLayout" name="verticalLayout_19">
+          <item>
+           <widget class="QSpinBox" name="spinBox_attackRate_2">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>attack
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="3">
-        <layout class="QVBoxLayout" name="verticalLayout_4">
-         <item>
-          <widget class="QSpinBox" name="spinBox_outputLevel_1"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string>output
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="3">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QSpinBox" name="spinBox_outputLevel_1"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>output
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout_41">
-         <item>
-          <widget class="QCheckBox" name="checkBox_operator1_4">
-           <property name="text">
-            <string>4</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="10">
-        <layout class="QVBoxLayout" name="verticalLayout_38">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyScalingRate_3">
-           <property name="maximum">
-            <number>3</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_34">
-           <property name="text">
-            <string>key scaling
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_41">
+          <item>
+           <widget class="QCheckBox" name="checkBox_operator1_4">
+            <property name="text">
+             <string>4</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="10">
+         <layout class="QVBoxLayout" name="verticalLayout_38">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyScalingRate_3">
+            <property name="maximum">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_34">
+            <property name="text">
+             <string>key scaling
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="9">
-        <layout class="QVBoxLayout" name="verticalLayout_10">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyscalingLevel_1"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_9">
-           <property name="text">
-            <string>key scaling
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="9">
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyscalingLevel_1"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>key scaling
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="7">
-        <layout class="QVBoxLayout" name="verticalLayout_48">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay2Rate_4">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_43">
-           <property name="text">
-            <string>decay 2
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="7">
+         <layout class="QVBoxLayout" name="verticalLayout_48">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay2Rate_4">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_43">
+            <property name="text">
+             <string>decay 2
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="5">
-        <layout class="QVBoxLayout" name="verticalLayout_33">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay1Rate_3">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_29">
-           <property name="text">
-            <string>decay 1
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="5">
+         <layout class="QVBoxLayout" name="verticalLayout_33">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay1Rate_3">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_29">
+            <property name="text">
+             <string>decay 1
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="5">
-        <layout class="QVBoxLayout" name="verticalLayout_20">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay1Rate_2">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_17">
-           <property name="text">
-            <string>decay 1
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="5">
+         <layout class="QVBoxLayout" name="verticalLayout_20">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay1Rate_2">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>decay 1
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="12">
-        <layout class="QVBoxLayout" name="verticalLayout_27">
-         <item>
-          <widget class="QSpinBox" name="spinBox_egBias_2">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_24">
-           <property name="text">
-            <string>eg bias</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="5">
-        <layout class="QVBoxLayout" name="verticalLayout_6">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay1Rate_1">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_5">
-           <property name="text">
-            <string>decay 1
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="12">
+         <layout class="QVBoxLayout" name="verticalLayout_27">
+          <item>
+           <widget class="QSpinBox" name="spinBox_egBias_2">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_24">
+            <property name="text">
+             <string>eg bias</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="5">
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay1Rate_1">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>decay 1
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="2">
-        <layout class="QVBoxLayout" name="verticalLayout_43">
-         <item>
-          <widget class="QSpinBox" name="spinBox_detune_4">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_38">
-           <property name="text">
-            <string>detune</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="4">
-        <layout class="QVBoxLayout" name="verticalLayout_45">
-         <item>
-          <widget class="QSpinBox" name="spinBox_attackRate_4">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_40">
-           <property name="text">
-            <string>attack
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_43">
+          <item>
+           <widget class="QSpinBox" name="spinBox_detune_4">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_38">
+            <property name="text">
+             <string>detune</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="4">
+         <layout class="QVBoxLayout" name="verticalLayout_45">
+          <item>
+           <widget class="QSpinBox" name="spinBox_attackRate_4">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_40">
+            <property name="text">
+             <string>attack
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="10">
-        <layout class="QVBoxLayout" name="verticalLayout_11">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyScalingRate_1">
-           <property name="maximum">
-            <number>3</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_10">
-           <property name="text">
-            <string>key scaling
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="10">
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyScalingRate_1">
+            <property name="maximum">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>key scaling
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="12">
-        <layout class="QVBoxLayout" name="verticalLayout_40">
-         <item>
-          <widget class="QSpinBox" name="spinBox_egBias_3">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_36">
-           <property name="text">
-            <string>eg bias</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="9">
-        <layout class="QVBoxLayout" name="verticalLayout_37">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyscalingLevel_3"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_33">
-           <property name="text">
-            <string>key scaling
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="12">
+         <layout class="QVBoxLayout" name="verticalLayout_40">
+          <item>
+           <widget class="QSpinBox" name="spinBox_egBias_3">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_36">
+            <property name="text">
+             <string>eg bias</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="9">
+         <layout class="QVBoxLayout" name="verticalLayout_37">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyscalingLevel_3"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_33">
+            <property name="text">
+             <string>key scaling
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="1">
-        <layout class="QVBoxLayout" name="verticalLayout_29">
-         <item>
-          <widget class="QSpinBox" name="spinBox_frequency_3">
-           <property name="maximum">
-            <number>63</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_25">
-           <property name="text">
-            <string>frequency</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="2">
-        <layout class="QVBoxLayout" name="verticalLayout_17">
-         <item>
-          <widget class="QSpinBox" name="spinBox_detune_2">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_14">
-           <property name="text">
-            <string>detune</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="7">
-        <layout class="QVBoxLayout" name="verticalLayout_8">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay2Rate_1">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_7">
-           <property name="text">
-            <string>decay 2
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_29">
+          <item>
+           <widget class="QSpinBox" name="spinBox_frequency_3">
+            <property name="maximum">
+             <number>63</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_25">
+            <property name="text">
+             <string>frequency</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_17">
+          <item>
+           <widget class="QSpinBox" name="spinBox_detune_2">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>detune</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="7">
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay2Rate_1">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>decay 2
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="6">
-        <layout class="QVBoxLayout" name="verticalLayout_47">
-         <item>
-          <widget class="QSpinBox" name="spinBox_decay1Level_4">
-           <property name="maximum">
-            <number>15</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_42">
-           <property name="text">
-            <string>decay 1
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="6">
+         <layout class="QVBoxLayout" name="verticalLayout_47">
+          <item>
+           <widget class="QSpinBox" name="spinBox_decay1Level_4">
+            <property name="maximum">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_42">
+            <property name="text">
+             <string>decay 1
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="8">
-        <layout class="QVBoxLayout" name="verticalLayout_23">
-         <item>
-          <widget class="QSpinBox" name="spinBox_releaseRate_2">
-           <property name="maximum">
-            <number>15</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_20">
-           <property name="text">
-            <string>release
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="8">
+         <layout class="QVBoxLayout" name="verticalLayout_23">
+          <item>
+           <widget class="QSpinBox" name="spinBox_releaseRate_2">
+            <property name="maximum">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_20">
+            <property name="text">
+             <string>release
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout_14">
-         <item>
-          <widget class="QCheckBox" name="checkBox_operator1">
-           <property name="text">
-            <string>1</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="2">
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <widget class="QSpinBox" name="spinBox_detune_1">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>detune</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="1">
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QSpinBox" name="spinBox_frequency_1">
-           <property name="maximum">
-            <number>63</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>frequency</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="9">
-        <layout class="QVBoxLayout" name="verticalLayout_24">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyscalingLevel_2"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_21">
-           <property name="text">
-            <string>key scaling
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_14">
+          <item>
+           <widget class="QCheckBox" name="checkBox_operator1">
+            <property name="text">
+             <string>1</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QSpinBox" name="spinBox_detune_1">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>detune</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QSpinBox" name="spinBox_frequency_1">
+            <property name="maximum">
+             <number>63</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>frequency</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="9">
+         <layout class="QVBoxLayout" name="verticalLayout_24">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyscalingLevel_2"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_21">
+            <property name="text">
+             <string>key scaling
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="3" colspan="6">
-        <widget class="QLabel" name="label_50">
-         <property name="text">
-          <string>ENVELOPE GENERATORS</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="9">
-        <layout class="QVBoxLayout" name="verticalLayout_50">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyscalingLevel_4"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_45">
-           <property name="text">
-            <string>key scaling
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="3" colspan="6">
+         <widget class="QLabel" name="label_50">
+          <property name="text">
+           <string>ENVELOPE GENERATORS</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="9">
+         <layout class="QVBoxLayout" name="verticalLayout_50">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyscalingLevel_4"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_45">
+            <property name="text">
+             <string>key scaling
 level</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="12">
-        <layout class="QVBoxLayout" name="verticalLayout_13">
-         <item>
-          <widget class="QSpinBox" name="spinBox_egBias_1">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_12">
-           <property name="text">
-            <string>eg bias</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="2">
-        <layout class="QVBoxLayout" name="verticalLayout_30">
-         <item>
-          <widget class="QSpinBox" name="spinBox_detune_3">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_26">
-           <property name="text">
-            <string>detune</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="1">
-        <layout class="QVBoxLayout" name="verticalLayout_42">
-         <item>
-          <widget class="QSpinBox" name="spinBox_frequency_4">
-           <property name="maximum">
-            <number>63</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_37">
-           <property name="text">
-            <string>frequency</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="4">
-        <layout class="QVBoxLayout" name="verticalLayout_32">
-         <item>
-          <widget class="QSpinBox" name="spinBox_attackRate_3">
-           <property name="maximum">
-            <number>31</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_28">
-           <property name="text">
-            <string>attack
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="12">
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <item>
+           <widget class="QSpinBox" name="spinBox_egBias_1">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>eg bias</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_30">
+          <item>
+           <widget class="QSpinBox" name="spinBox_detune_3">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_26">
+            <property name="text">
+             <string>detune</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_42">
+          <item>
+           <widget class="QSpinBox" name="spinBox_frequency_4">
+            <property name="maximum">
+             <number>63</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_37">
+            <property name="text">
+             <string>frequency</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="4">
+         <layout class="QVBoxLayout" name="verticalLayout_32">
+          <item>
+           <widget class="QSpinBox" name="spinBox_attackRate_3">
+            <property name="maximum">
+             <number>31</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_28">
+            <property name="text">
+             <string>attack
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="11">
-        <layout class="QVBoxLayout" name="verticalLayout_26">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyVelocity_2">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_23">
-           <property name="text">
-            <string>key
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="11">
+         <layout class="QVBoxLayout" name="verticalLayout_26">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyVelocity_2">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_23">
+            <property name="text">
+             <string>key
 velocity</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="8">
-        <layout class="QVBoxLayout" name="verticalLayout_49">
-         <item>
-          <widget class="QSpinBox" name="spinBox_releaseRate_4">
-           <property name="maximum">
-            <number>15</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_44">
-           <property name="text">
-            <string>release
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="8">
+         <layout class="QVBoxLayout" name="verticalLayout_49">
+          <item>
+           <widget class="QSpinBox" name="spinBox_releaseRate_4">
+            <property name="maximum">
+             <number>15</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_44">
+            <property name="text">
+             <string>release
 rate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="4" column="11">
-        <layout class="QVBoxLayout" name="verticalLayout_52">
-         <item>
-          <widget class="QSpinBox" name="spinBox_keyVelocity_4">
-           <property name="maximum">
-            <number>7</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_47">
-           <property name="text">
-            <string>key
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="11">
+         <layout class="QVBoxLayout" name="verticalLayout_52">
+          <item>
+           <widget class="QSpinBox" name="spinBox_keyVelocity_4">
+            <property name="maximum">
+             <number>7</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_47">
+            <property name="text">
+             <string>key
 velocity</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignHCenter|Qt::AlignTop</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="0">
-        <widget class="QSpinBox" name="spinBox_3"/>
-       </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="text">
-          <string>poly</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="2">
-        <widget class="QLabel" name="label_55">
-         <property name="text">
-          <string>transpose</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QPushButton" name="pushButton_6">
-         <property name="text">
-          <string>porta</string>
-         </property>
-         <property name="default">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QSpinBox" name="spinBox_4"/>
-       </item>
-       <item row="3" column="2">
-        <widget class="QSpinBox" name="spinBox_5"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_56">
-         <property name="text">
-          <string>bender</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="2">
-        <widget class="QLabel" name="label_57">
-         <property name="text">
-          <string>portamento</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0" colspan="3">
-        <spacer name="verticalSpacer_9">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="0" colspan="3">
-        <widget class="QLabel" name="label_58">
-         <property name="text">
-          <string>KEYBOARD</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_64">
-       <item>
-        <widget class="QLabel" name="label_59">
-         <property name="text">
-          <string>PEDAL</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_7">
-         <property name="text">
-          <string>hold</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QSpinBox" name="spinBox_6"/>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_60">
-         <property name="text">
-          <string>volume</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_8">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_66">
-       <item>
-        <widget class="QLabel" name="label_61">
-         <property name="text">
-          <string>WHEEL</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QSpinBox" name="spinBox_7"/>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_62">
-         <property name="text">
-          <string>pitch</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QSpinBox" name="spinBox_8"/>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_63">
-         <property name="text">
-          <string>amplitude</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_7">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="0" colspan="2">
-        <widget class="QLabel" name="label_64">
-         <property name="text">
-          <string>BREATH CONTROL</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QSpinBox" name="spinBox_9"/>
-       </item>
-       <item row="1" column="1">
-        <widget class="QSpinBox" name="spinBox_10"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_65">
-         <property name="text">
-          <string>pitch bias</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLabel" name="label_66">
-         <property name="text">
-          <string>lfo pitch</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QSpinBox" name="spinBox_11"/>
-       </item>
-       <item row="3" column="1">
-        <widget class="QSpinBox" name="spinBox_12"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_67">
-         <property name="text">
-          <string>eg bias</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLabel" name="label_68">
-         <property name="text">
-          <string>lfo ampl</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0" colspan="2">
-        <spacer name="verticalSpacer_10">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QGridLayout" name="gridLayout_4">
-       <item row="1" column="0" rowspan="2">
-        <widget class="QPushButton" name="pushButton_8">
-         <property name="text">
-          <string>sync</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QSpinBox" name="spinBox_13"/>
-       </item>
-       <item row="1" column="2">
-        <widget class="QSpinBox" name="spinBox_14"/>
-       </item>
-       <item row="1" column="3">
-        <widget class="QSpinBox" name="spinBox_15"/>
-       </item>
-       <item row="1" column="4" rowspan="5">
-        <layout class="QVBoxLayout" name="verticalLayout_73">
-         <item>
-          <widget class="QPushButton" name="pushButton_9">
-           <property name="text">
-            <string>1</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_10">
-           <property name="text">
-            <string>2</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_11">
-           <property name="text">
-            <string>3</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_12">
-           <property name="text">
-            <string>4</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLabel" name="label_71">
-         <property name="text">
-          <string>delay</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QLabel" name="label_72">
-         <property name="text">
-          <string>pitch</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="3">
-        <widget class="QLabel" name="label_73">
-         <property name="text">
-          <string>p sens</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0" rowspan="2">
-        <layout class="QVBoxLayout" name="verticalLayout_80">
-         <item>
-          <widget class="QSpinBox" name="spinBox_16"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_70">
-           <property name="text">
-            <string>wave</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="1">
-        <widget class="QSpinBox" name="spinBox_17"/>
-       </item>
-       <item row="3" column="2">
-        <widget class="QSpinBox" name="spinBox_18"/>
-       </item>
-       <item row="3" column="3">
-        <widget class="QSpinBox" name="spinBox_19"/>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLabel" name="label_74">
-         <property name="text">
-          <string>speed</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="2">
-        <widget class="QLabel" name="label_75">
-         <property name="text">
-          <string>ampl</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="3">
-        <widget class="QLabel" name="label_76">
-         <property name="text">
-          <string>a sens</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0" colspan="4">
-        <spacer name="verticalSpacer_11">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="0" colspan="5">
-        <widget class="QLabel" name="label_69">
-         <property name="text">
-          <string>LFO</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QGridLayout" name="gridLayout_5">
-       <item row="1" column="0">
-        <widget class="QSpinBox" name="spinBox_20"/>
-       </item>
-       <item row="1" column="1">
-        <widget class="QSpinBox" name="spinBox_21"/>
-       </item>
-       <item row="1" column="2">
-        <widget class="QSpinBox" name="spinBox_22"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_78">
-         <property name="text">
-          <string>level 1</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLabel" name="label_79">
-         <property name="text">
-          <string>level 2</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QLabel" name="label_80">
-         <property name="text">
-          <string>level 3</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QSpinBox" name="spinBox_23"/>
-       </item>
-       <item row="3" column="1">
-        <widget class="QSpinBox" name="spinBox_24"/>
-       </item>
-       <item row="3" column="2">
-        <widget class="QSpinBox" name="spinBox_25"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_81">
-         <property name="text">
-          <string>rate 1</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLabel" name="label_82">
-         <property name="text">
-          <string>rate 2</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="2">
-        <widget class="QLabel" name="label_83">
-         <property name="text">
-          <string>rate 3</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0" colspan="3">
-        <spacer name="verticalSpacer_12">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="0" colspan="3">
-        <widget class="QLabel" name="label_77">
-         <property name="text">
-          <string>PITCH ENVELOPE</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </item>
-  </layout>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="0">
+         <widget class="QSpinBox" name="spinBox_3"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="text">
+           <string>poly</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QLabel" name="label_55">
+          <property name="text">
+           <string>transpose</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="text">
+           <string>porta</string>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QSpinBox" name="spinBox_4"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QSpinBox" name="spinBox_5"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_56">
+          <property name="text">
+           <string>bender</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="label_57">
+          <property name="text">
+           <string>portamento</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="3">
+         <spacer name="verticalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QLabel" name="label_58">
+          <property name="text">
+           <string>KEYBOARD</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_64">
+        <item>
+         <widget class="QLabel" name="label_59">
+          <property name="text">
+           <string>PEDAL</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="text">
+           <string>hold</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinBox_6"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_60">
+          <property name="text">
+           <string>volume</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_66">
+        <item>
+         <widget class="QLabel" name="label_61">
+          <property name="text">
+           <string>WHEEL</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinBox_7"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_62">
+          <property name="text">
+           <string>pitch</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinBox_8"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_63">
+          <property name="text">
+           <string>amplitude</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="label_64">
+          <property name="text">
+           <string>BREATH CONTROL</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QSpinBox" name="spinBox_9"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="spinBox_10"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_65">
+          <property name="text">
+           <string>pitch bias</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_66">
+          <property name="text">
+           <string>lfo pitch</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QSpinBox" name="spinBox_11"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QSpinBox" name="spinBox_12"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_67">
+          <property name="text">
+           <string>eg bias</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_68">
+          <property name="text">
+           <string>lfo ampl</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="2">
+         <spacer name="verticalSpacer_10">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="0" rowspan="3">
+         <layout class="QVBoxLayout" name="verticalLayout_55">
+          <item>
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="text">
+             <string>sync</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_80">
+            <item>
+             <widget class="QSpinBox" name="spinBox_16"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_70">
+              <property name="text">
+               <string>wave</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_56">
+          <item>
+           <widget class="QSpinBox" name="spinBox_13"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_71">
+            <property name="text">
+             <string>delay</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_60">
+          <item>
+           <widget class="QSpinBox" name="spinBox_14"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_72">
+            <property name="text">
+             <string>pitch</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="3">
+         <layout class="QVBoxLayout" name="verticalLayout_61">
+          <item>
+           <widget class="QSpinBox" name="spinBox_15"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_73">
+            <property name="text">
+             <string>p sens</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="4" rowspan="3">
+         <layout class="QVBoxLayout" name="verticalLayout_54">
+          <item>
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_10">
+            <property name="text">
+             <string>2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_11">
+            <property name="text">
+             <string>3</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_12">
+            <property name="text">
+             <string>4</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_62">
+          <item>
+           <widget class="QSpinBox" name="spinBox_17"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_74">
+            <property name="text">
+             <string>speed</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_63">
+          <item>
+           <widget class="QSpinBox" name="spinBox_18"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_75">
+            <property name="text">
+             <string>ampl</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="3">
+         <layout class="QVBoxLayout" name="verticalLayout_65">
+          <item>
+           <widget class="QSpinBox" name="spinBox_19"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_76">
+            <property name="text">
+             <string>a sens</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="1" colspan="3">
+         <spacer name="verticalSpacer_15">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="5">
+         <widget class="QLabel" name="label_69">
+          <property name="text">
+           <string>LFO</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="0">
+         <widget class="QSpinBox" name="spinBox_20"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="spinBox_21"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QSpinBox" name="spinBox_22"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_78">
+          <property name="text">
+           <string>level 1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_79">
+          <property name="text">
+           <string>level 2</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="label_80">
+          <property name="text">
+           <string>level 3</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QSpinBox" name="spinBox_23"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QSpinBox" name="spinBox_24"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QSpinBox" name="spinBox_25"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_81">
+          <property name="text">
+           <string>rate 1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_82">
+          <property name="text">
+           <string>rate 2</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="label_83">
+          <property name="text">
+           <string>rate 3</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="3">
+         <spacer name="verticalSpacer_12">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QLabel" name="label_77">
+          <property name="text">
+           <string>PITCH ENVELOPE</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <tabstops>
   <tabstop>checkBox_operator1</tabstop>
